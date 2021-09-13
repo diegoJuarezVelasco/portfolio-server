@@ -25,7 +25,7 @@ app.use(express.json({ extend: true }));
 //Puerto de la app
 const PORT = process.env.PORT || 4000;
 
-app.listen(PORT);
+app.listen(PORT,'0.0.0.0');
 
 app.post("/send", (req, res, next) => {
   var name = req.body.name;
@@ -41,7 +41,7 @@ app.post("/send", (req, res, next) => {
   transporter.sendMail(mail, (err, data) => {
     if (err) {
       res.json({
-        status: "fail",
+        status: "fail :(",
       });
     } else {
       res.json({
