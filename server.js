@@ -8,8 +8,8 @@ require("dotenv").config();
 const app = express();
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com", //replace with your email provider
-  port: 465,
+  host: "smtp.office365.com", //replace with your email provider
+  port: 587,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASSWORD,
@@ -35,7 +35,7 @@ app.post("/send", (req, res, next) => {
 
   var mail = {
     from: name,
-    to: process.env.EMAIL,
+    to: 'diegoaw591@gmail.com',
     text: message,
   };
   transporter.sendMail(mail, (err, data) => {
