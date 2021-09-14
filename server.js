@@ -40,7 +40,7 @@ app.post("/send", (req, res, next) => {
   };
   transporter.sendMail(mail, (err, data) => {
     if (err) {
-      res.status(500).send(error.message);
+      res.status(500).send(err.message);
     } else {
       res.status(200).json(req.body);
     }
