@@ -35,7 +35,7 @@ app.post("/send", (req, res, next) => {
 
   var mail = {
     from: name,
-    to: 'diegoaw591@gmail.com',
+    to: 'diego_j_v@live.com.mx',
     text: message,
   };
   transporter.sendMail(mail, (err, data) => {
