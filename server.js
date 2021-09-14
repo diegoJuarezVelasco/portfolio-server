@@ -37,6 +37,7 @@ app.post("/send", (req, res, next) => {
     from: name,
     to: 'diego_j_v@live.com.mx',
     text: message,
+    dubject: 'portfolio project'
   };
   transporter.sendMail(mail, (err, data) => {
     if (err) {
